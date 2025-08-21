@@ -1,4 +1,4 @@
-import { MapPin } from "lucide-react";
+import { MapPin, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { formatCurrency } from "@/lib/utils";
 import type { Property } from "@shared/schema";
@@ -6,6 +6,35 @@ import type { Property } from "@shared/schema";
 interface PropertyCardProps {
   property: Property;
   onSelect: (property: Property) => void;
+}
+
+function createWhatsAppMessage(property: Property): string {
+  const baseMessage = `Halo, saya tertarik dengan *${property.name}* di ${property.location}.
+
+*Detail Properti:*
+- Nama: ${property.name}
+- Lokasi: ${property.location}
+- Kapasitas: ${property.capacity}
+- Jumlah unit: ${property.units}
+
+*Harga:*
+${property.rates.length > 0 
+  ? property.rates.map(rate => `- ${rate.label}: Rp ${formatCurrency(rate.price)}`).join('\n')
+  : '- Hubungi untuk informasi harga'
+}
+
+Bisakah Anda memberikan informasi lebih lanjut tentang ketersediaan dan proses booking?
+
+Terima kasih!`;
+
+  return encodeURIComponent(baseMessage);
+}
+
+function openWhatsApp(property: Property) {
+  const phoneNumber = "6282241819991";
+  const message = createWhatsAppMessage(property);
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+  window.open(whatsappUrl, '_blank');
 }
 
 export default function PropertyCard({ property, onSelect }: PropertyCardProps) {
@@ -47,13 +76,24 @@ export default function PropertyCard({ property, onSelect }: PropertyCardProps) 
             </p>
           </div>
         </div>
-        <Button
-          onClick={() => onSelect(property)}
-          className="w-full bg-primary hover:bg-primary/90 text-white py-3 rounded-xl font-medium transition-all duration-200"
-          data-testid={`button-detail-${property.id}`}
-        >
-          Lihat Detail
-        </Button>
+        <div className="flex gap-3">
+          <Button
+            onClick={() => onSelect(property)}
+            variant="outline"
+            className="flex-1 py-3 rounded-xl font-medium transition-all duration-200"
+            data-testid={`button-detail-${property.id}`}
+          >
+            Lihat Detail
+          </Button>
+          <Button
+            onClick={() => openWhatsApp(property)}
+            className="flex-1 bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-medium transition-all duration-200 flex items-center justify-center gap-2"
+            data-testid={`button-whatsapp-${property.id}`}
+          >
+            <MessageCircle className="w-4 h-4" />
+            Booking
+          </Button>
+        </div>
       </div>
     </div>
   );

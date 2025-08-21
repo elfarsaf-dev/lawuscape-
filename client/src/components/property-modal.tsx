@@ -1,4 +1,4 @@
-import { X, Users, Home, Check, AlertTriangle, Calendar } from "lucide-react";
+import { X, Users, Home, Check, AlertTriangle, Calendar, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { formatCurrency } from "@/lib/utils";
 import type { Property } from "@shared/schema";
@@ -6,6 +6,39 @@ import type { Property } from "@shared/schema";
 interface PropertyModalProps {
   property: Property;
   onClose: () => void;
+}
+
+function createWhatsAppMessage(property: Property): string {
+  const baseMessage = `Halo, saya tertarik dengan *${property.name}* di ${property.location}.
+
+*Detail Properti:*
+- Nama: ${property.name}
+- Lokasi: ${property.location}
+- Kapasitas: ${property.capacity}
+- Jumlah unit: ${property.units}
+
+*Harga:*
+${property.rates.length > 0 
+  ? property.rates.map(rate => `- ${rate.label}: Rp ${formatCurrency(rate.price)}`).join('\n')
+  : '- Hubungi untuk informasi harga'
+}
+
+*Fasilitas:*
+${property.facilities.slice(0, 10).map(facility => `- ${facility}`).join('\n')}
+${property.facilities.length > 10 ? `- Dan ${property.facilities.length - 10} fasilitas lainnya` : ''}
+
+Bisakah Anda memberikan informasi lebih lanjut tentang ketersediaan dan proses booking?
+
+Terima kasih!`;
+
+  return encodeURIComponent(baseMessage);
+}
+
+function openWhatsApp(property: Property) {
+  const phoneNumber = "6282241819991";
+  const message = createWhatsAppMessage(property);
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+  window.open(whatsappUrl, '_blank');
 }
 
 export default function PropertyModal({ property, onClose }: PropertyModalProps) {
@@ -135,15 +168,26 @@ export default function PropertyModal({ property, onClose }: PropertyModalProps)
               </div>
             </div>
 
-            {/* Book Now Button */}
+            {/* Booking Actions */}
             <div className="mt-8 pt-6 border-t">
-              <Button
-                className="w-full bg-primary hover:bg-primary/90 text-white py-4 rounded-xl font-semibold text-lg transition-all duration-200"
-                data-testid="button-book-now"
-              >
-                <Calendar className="mr-2 h-5 w-5" />
-                Hubungi untuk Booking
-              </Button>
+              <div className="flex gap-4">
+                <Button
+                  onClick={onClose}
+                  variant="outline"
+                  className="flex-1 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
+                  data-testid="button-close-modal"
+                >
+                  Tutup
+                </Button>
+                <Button
+                  onClick={() => openWhatsApp(property)}
+                  className="flex-2 bg-green-600 hover:bg-green-700 text-white py-4 rounded-xl font-semibold text-lg transition-all duration-200 flex items-center justify-center gap-3"
+                  data-testid="button-whatsapp-booking"
+                >
+                  <MessageCircle className="w-6 h-6" />
+                  Booking via WhatsApp
+                </Button>
+              </div>
             </div>
           </div>
         </div>
