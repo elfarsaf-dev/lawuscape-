@@ -83,10 +83,10 @@ export const propertyData: Property[] = [
     name: "Mongkrang Story Cottage",
     location: "Tawangmangu", 
     rates: [
-      { label: "Weekday", price: 400000 },
-      { label: "Weekend", price: 600000 }
+      { label: "Weekday", price: 500000 },
+      { label: "Weekend", price: 700000 }
     ],
-    units: 1,
+    units: 6,
     facilities: [
       "1 Bed",
       "Sofa",
@@ -193,7 +193,7 @@ export const propertyData: Property[] = [
       { label: "Jumat", price: 700000 },
       { label: "Weekend", price: 800000 }
     ],
-    units: 3,
+    units: 5,
     facilities: [
       "Private Pool Air Hangat",
       "1 Bed Type Queen Size",
@@ -346,7 +346,7 @@ export const propertyData: Property[] = [
       "Private pool",
       "View adem"
     ],
-    capacity: "2-4 orang",
+    capacity: "2-6 orang",
     notes: [
       "Check in jam 2 siang",
       "Check out jam 12 siang",
@@ -388,7 +388,7 @@ export const propertyData: Property[] = [
       "Free BBQ",
       "Free tenda"
     ],
-    capacity: "2-6 orang",
+    capacity: "2-7 orang",
     notes: [
       "Check in jam 2 siang",
       "Check out jam 12 siang",
@@ -481,7 +481,7 @@ export const propertyData: Property[] = [
       { label: "4 Kamar - Jumat", price: 1750000 },
       { label: "4 Kamar - Sabtu", price: 2250000 }
     ],
-    units: 2,
+    units: 1,
     facilities: [
       "3 & 4 kamar tidur",
       "2 kamar mandi air panas",
@@ -521,7 +521,7 @@ export const propertyData: Property[] = [
       { label: "Jumat", price: 500000 },
       { label: "Sabtu", price: 700000 }
     ],
-    units: 1,
+    units: 3,
     facilities: [
       "Mini pool",
       "Kamar mandi dengan water heater & shower",
