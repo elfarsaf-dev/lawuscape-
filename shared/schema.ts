@@ -1,16 +1,15 @@
 import { z } from "zod";
 
-export const propertyRateSchema = z.object({
-  weekday: z.number(),
-  jumat: z.number(),
-  weekend: z.number(),
+export const propertyRateItemSchema = z.object({
+  label: z.string(),
+  price: z.number(),
 });
 
 export const propertySchema = z.object({
   id: z.string(),
   name: z.string(),
   location: z.string(),
-  rate: propertyRateSchema,
+  rates: z.array(propertyRateItemSchema),
   units: z.number(),
   facilities: z.array(z.string()),
   capacity: z.string(),
@@ -19,5 +18,5 @@ export const propertySchema = z.object({
   type: z.enum(["villa", "glamping"]),
 });
 
-export type PropertyRate = z.infer<typeof propertyRateSchema>;
+export type PropertyRateItem = z.infer<typeof propertyRateItemSchema>;
 export type Property = z.infer<typeof propertySchema>;

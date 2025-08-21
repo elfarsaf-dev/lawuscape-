@@ -5,11 +5,14 @@ export const propertyData: Property[] = [
     id: "glamping-diyanis",
     name: "Glamping Diyanis",
     location: "Sekipan, Tawangmangu",
-    rate: {
-      weekday: 500000,
-      jumat: 600000,
-      weekend: 700000
-    },
+    rates: [
+      { label: "Weekday - Kolam renang air dingin", price: 500000 },
+      { label: "Weekday - Kolam renang air hangat", price: 600000 },
+      { label: "Jumat - Kolam renang air dingin", price: 600000 },
+      { label: "Jumat - Kolam renang air hangat", price: 700000 },
+      { label: "Weekend - Kolam renang air dingin", price: 700000 },
+      { label: "Weekend - Kolam renang air hangat", price: 800000 }
+    ],
     units: 11,
     facilities: [
       "Smart TV",
@@ -40,11 +43,11 @@ export const propertyData: Property[] = [
     id: "villa-dita",
     name: "Villa Dita", 
     location: "Sekipan, Tawangmangu",
-    rate: {
-      weekday: 2000000,
-      jumat: 2500000,
-      weekend: 3000000
-    },
+    rates: [
+      { label: "Minggu – Kamis", price: 2000000 },
+      { label: "Jumat", price: 2500000 },
+      { label: "Sabtu", price: 3000000 }
+    ],
     units: 1,
     facilities: [
       "4 Kamar tidur",
@@ -79,11 +82,10 @@ export const propertyData: Property[] = [
     id: "mongkrang-story-cottage",
     name: "Mongkrang Story Cottage",
     location: "Tawangmangu", 
-    rate: {
-      weekday: 400000,
-      jumat: 400000,
-      weekend: 600000
-    },
+    rates: [
+      { label: "Weekday", price: 400000 },
+      { label: "Weekend", price: 600000 }
+    ],
     units: 1,
     facilities: [
       "1 Bed",
@@ -115,11 +117,11 @@ export const propertyData: Property[] = [
     id: "villa-alami",
     name: "Villa Alami",
     location: "Sekipan, Tawangmangu",
-    rate: {
-      weekday: 1500000,
-      jumat: 1700000, 
-      weekend: 2500000
-    },
+    rates: [
+      { label: "Weekday", price: 1500000 },
+      { label: "Jumat", price: 1700000 },
+      { label: "Sabtu", price: 2500000 }
+    ],
     units: 1,
     facilities: [
       "3 kamar tidur",
@@ -150,11 +152,7 @@ export const propertyData: Property[] = [
     id: "villa-teduh-jiwa",
     name: "Villa Teduh Jiwa",
     location: "Sekipan, Tawangmangu",
-    rate: {
-      weekday: 0,
-      jumat: 0,
-      weekend: 0
-    },
+    rates: [],
     units: 1,
     facilities: [
       "3 Kamar tidur",
@@ -190,11 +188,11 @@ export const propertyData: Property[] = [
     id: "diza-glamping",
     name: "Diza Glamping",
     location: "Tawangmangu",
-    rate: {
-      weekday: 550000,
-      jumat: 700000,
-      weekend: 800000
-    },
+    rates: [
+      { label: "Weekday", price: 550000 },
+      { label: "Jumat", price: 700000 },
+      { label: "Weekend", price: 800000 }
+    ],
     units: 3,
     facilities: [
       "Private Pool Air Hangat",
@@ -228,11 +226,10 @@ export const propertyData: Property[] = [
     id: "karismaya",
     name: "Karismaya",
     location: "Sekipan, Tawangmangu",
-    rate: {
-      weekday: 2000000,
-      jumat: 0,
-      weekend: 2500000
-    },
+    rates: [
+      { label: "Weekday", price: 2000000 },
+      { label: "Weekend", price: 2500000 }
+    ],
     units: 1,
     facilities: [
       "Ruang tamu",
@@ -264,11 +261,9 @@ export const propertyData: Property[] = [
     id: "villa-ku",
     name: "Villa \"KU\"",
     location: "Sekipan, dekat wisata",
-    rate: {
-      weekday: 1000000,
-      jumat: 0,
-      weekend: 0
-    },
+    rates: [
+      { label: "Harga 1 jutaan", price: 1000000 }
+    ],
     units: 1,
     facilities: [
       "3 Kamar tidur",
@@ -300,11 +295,10 @@ export const propertyData: Property[] = [
     id: "villa-andromeda",
     name: "Villa Andromeda",
     location: "Sekipan, Tawangmangu",
-    rate: {
-      weekday: 2000000,
-      jumat: 0,
-      weekend: 2500000
-    },
+    rates: [
+      { label: "Weekday", price: 2000000 },
+      { label: "Weekend", price: 2500000 }
+    ],
     units: 1,
     facilities: [
       "Ruang tamu",
@@ -336,11 +330,9 @@ export const propertyData: Property[] = [
     id: "zheyuri-glamping",
     name: "Zheyuri Glamping",
     location: "Tawangmangu",
-    rate: {
-      weekday: 500000,
-      jumat: 0,
-      weekend: 0
-    },
+    rates: [
+      { label: "Harga start 500K", price: 500000 }
+    ],
     units: 1,
     facilities: [
       "1 Bed di lantai 2, bawahnya sofa",
@@ -372,11 +364,10 @@ export const propertyData: Property[] = [
     id: "azalea-glamping",
     name: "Azalea Glamping",
     location: "Pleseran, Tawangmangu",
-    rate: {
-      weekday: 500000,
-      jumat: 0,
-      weekend: 800000
-    },
+    rates: [
+      { label: "Weekday", price: 500000 },
+      { label: "Weekend", price: 800000 }
+    ],
     units: 5,
     facilities: [
       "Bed ukuran 160x200",
@@ -416,11 +407,9 @@ export const propertyData: Property[] = [
     id: "villa-kemandoan",
     name: "Villa Kemandoan",
     location: "Sekipan, Tawangmangu",
-    rate: {
-      weekday: 2000000,
-      jumat: 2500000,
-      weekend: 3000000
-    },
+    rates: [
+      { label: "Mulai 2 Jutaan / Malam", price: 2000000 }
+    ],
     units: 1,
     facilities: [
       "4 Kamar tidur",
@@ -453,11 +442,11 @@ export const propertyData: Property[] = [
     id: "2r-glamping",
     name: "2R Glamping",
     location: "Kalisoro, Tawangmangu",
-    rate: {
-      weekday: 550000,
-      jumat: 650000,
-      weekend: 750000
-    },
+    rates: [
+      { label: "Senin–Kamis", price: 550000 },
+      { label: "Jumat", price: 650000 },
+      { label: "Sabtu", price: 750000 }
+    ],
     units: 3,
     facilities: [
       "Kasur ukuran queen size",
@@ -484,11 +473,14 @@ export const propertyData: Property[] = [
     id: "villa-ziezo",
     name: "Villa Ziezo",
     location: "Sekipan, Tawangmangu",
-    rate: {
-      weekday: 1300000,
-      jumat: 1500000,
-      weekend: 2000000
-    },
+    rates: [
+      { label: "3 Kamar - Minggu–Kamis", price: 1300000 },
+      { label: "3 Kamar - Jumat", price: 1500000 },
+      { label: "3 Kamar - Sabtu", price: 2000000 },
+      { label: "4 Kamar - Minggu–Kamis", price: 1500000 },
+      { label: "4 Kamar - Jumat", price: 1750000 },
+      { label: "4 Kamar - Sabtu", price: 2250000 }
+    ],
     units: 2,
     facilities: [
       "3 & 4 kamar tidur",
@@ -524,11 +516,11 @@ export const propertyData: Property[] = [
     id: "dava-glamping",
     name: "Dava Glamping",
     location: "Tawangmangu",
-    rate: {
-      weekday: 400000,
-      jumat: 500000,
-      weekend: 700000
-    },
+    rates: [
+      { label: "Minggu–Kamis", price: 400000 },
+      { label: "Jumat", price: 500000 },
+      { label: "Sabtu", price: 700000 }
+    ],
     units: 1,
     facilities: [
       "Mini pool",
@@ -560,11 +552,10 @@ export const propertyData: Property[] = [
     id: "villa-royal",
     name: "Villa Royal",
     location: "Tawangmangu",
-    rate: {
-      weekday: 2000000,
-      jumat: 2000000,
-      weekend: 2500000
-    },
+    rates: [
+      { label: "Weekday", price: 2000000 },
+      { label: "Weekend", price: 2500000 }
+    ],
     units: 1,
     facilities: [
       "2 ruang tamu dengan sofa",
@@ -595,11 +586,9 @@ export const propertyData: Property[] = [
     id: "bumwa-glamping",
     name: "BUMWA Glamping",
     location: "Tawangmangu",
-    rate: {
-      weekday: 600000,
-      jumat: 700000,
-      weekend: 850000
-    },
+    rates: [
+      { label: "Harga mulai 600 ribuan", price: 600000 }
+    ],
     units: 3,
     facilities: [
       "Mini pool air hangat",
@@ -622,86 +611,7 @@ export const propertyData: Property[] = [
       "No drugs",
       "Dekat wisata Bukit Sekipan & kebun stroberi (bisa petik sendiri)"
     ],
-    image: "https://images.unsplash.com/photo-1529408632839-a54952c491e5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+    image: "https://images.unsplash.com/photo-1607627000458-210e8d31c6d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
     type: "glamping"
-  },
-  {
-    id: "glamping-golden-lawu",
-    name: "Glamping Golden Lawu",
-    location: "Tawangmangu",
-    rate: {
-      weekday: 500000,
-      jumat: 700000,
-      weekend: 700000
-    },
-    units: 4,
-    facilities: [
-      "Welcome drink",
-      "Coffee & tea",
-      "Free breakfast 2 pax",
-      "Bed type queen",
-      "Wi-Fi",
-      "TV Android",
-      "Kulkas / fridge",
-      "Private pool",
-      "Kitchen",
-      "Large parking",
-      "Hill & vegetable garden view",
-      "Water heater",
-      "Sofa",
-      "Meja bar",
-      "Balkon (khusus Glamping 1)"
-    ],
-    capacity: "2-6 orang",
-    notes: [
-      "Check in jam 2 siang",
-      "Check out jam 12 siang",
-      "No miras",
-      "No mesum",
-      "No drugs",
-      "Extra bed Rp 100.000 (include breakfast)",
-      "Glamping 1 (Deluxe): Weekday 800.000, Weekend 1.000.000"
-    ],
-    image: "https://images.unsplash.com/photo-1544966503-7e27a5fc7b06?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-    type: "glamping"
-  },
-  {
-    id: "villa-diandra-2",
-    name: "Villa Diandra 2",
-    location: "Sekipan - Tawangmangu",
-    rate: {
-      weekday: 1500000,
-      jumat: 1500000,
-      weekend: 2000000
-    },
-    units: 1,
-    facilities: [
-      "2 lantai, furniture baru semua",
-      "Private pool",
-      "Balkon atas dengan view pegunungan & hutan Sekipan",
-      "Sofa bed + ruang tamu & ruang keluarga",
-      "3 kamar tidur",
-      "3 kamar mandi air panas",
-      "PlayStation 3",
-      "Dapur & alat masak lengkap + mini bar (kulkas, dispenser, magic com, dll.)",
-      "LED TV",
-      "Free Wi-Fi",
-      "2 Smart TV + karaoke & sound system",
-      "Alat bakaran (BBQ)",
-      "Parkir muat 3 mobil",
-      "Melayani catering dengan berbagai pilihan menu"
-    ],
-    capacity: "Maksimal 20 orang",
-    notes: [
-      "Check in jam 2 siang",
-      "Check out jam 12 siang",
-      "No miras",
-      "No mesum",
-      "No drugs",
-      "Tambah extra bed Rp 100.000/bed",
-      "Tambah orang kena charge Rp 20.000/orang"
-    ],
-    image: "https://images.unsplash.com/photo-1578645510447-e20b4311e3ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-    type: "villa"
   }
 ];
