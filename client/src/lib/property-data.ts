@@ -151,9 +151,9 @@ export const propertyData: Property[] = [
     name: "Villa Teduh Jiwa",
     location: "Sekipan, Tawangmangu",
     rate: {
-      weekday: 1800000,
-      jumat: 2200000,
-      weekend: 2800000
+      weekday: 0,
+      jumat: 0,
+      weekend: 0
     },
     units: 1,
     facilities: [
@@ -230,7 +230,7 @@ export const propertyData: Property[] = [
     location: "Sekipan, Tawangmangu",
     rate: {
       weekday: 2000000,
-      jumat: 2000000,
+      jumat: 0,
       weekend: 2500000
     },
     units: 1,
@@ -266,8 +266,8 @@ export const propertyData: Property[] = [
     location: "Sekipan, dekat wisata",
     rate: {
       weekday: 1000000,
-      jumat: 1200000,
-      weekend: 1500000
+      jumat: 0,
+      weekend: 0
     },
     units: 1,
     facilities: [
@@ -302,7 +302,7 @@ export const propertyData: Property[] = [
     location: "Sekipan, Tawangmangu",
     rate: {
       weekday: 2000000,
-      jumat: 2000000,
+      jumat: 0,
       weekend: 2500000
     },
     units: 1,
@@ -338,8 +338,8 @@ export const propertyData: Property[] = [
     location: "Tawangmangu",
     rate: {
       weekday: 500000,
-      jumat: 600000,
-      weekend: 750000
+      jumat: 0,
+      weekend: 0
     },
     units: 1,
     facilities: [
@@ -374,7 +374,7 @@ export const propertyData: Property[] = [
     location: "Pleseran, Tawangmangu",
     rate: {
       weekday: 500000,
-      jumat: 500000,
+      jumat: 0,
       weekend: 800000
     },
     units: 5,

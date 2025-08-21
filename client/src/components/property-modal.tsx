@@ -62,18 +62,29 @@ export default function PropertyModal({ property, onClose }: PropertyModalProps)
                 <div className="bg-slate-50 rounded-xl p-4">
                   <h4 className="font-semibold text-gray-800 mb-3">Harga per Malam</h4>
                   <div className="space-y-2">
-                    <div className="flex justify-between items-center" data-testid="modal-price-weekday">
-                      <span className="text-gray-600">Weekday:</span>
-                      <span className="font-bold text-gray-800">Rp {formatCurrency(property.rate.weekday)}</span>
-                    </div>
-                    <div className="flex justify-between items-center" data-testid="modal-price-jumat">
-                      <span className="text-gray-600">Jumat:</span>
-                      <span className="font-bold text-gray-800">Rp {formatCurrency(property.rate.jumat)}</span>
-                    </div>
-                    <div className="flex justify-between items-center" data-testid="modal-price-weekend">
-                      <span className="text-gray-600">Weekend:</span>
-                      <span className="font-bold text-gray-800">Rp {formatCurrency(property.rate.weekend)}</span>
-                    </div>
+                    {property.rate.weekday > 0 && (
+                      <div className="flex justify-between items-center" data-testid="modal-price-weekday">
+                        <span className="text-gray-600">Weekday:</span>
+                        <span className="font-bold text-gray-800">Rp {formatCurrency(property.rate.weekday)}</span>
+                      </div>
+                    )}
+                    {property.rate.jumat > 0 && (
+                      <div className="flex justify-between items-center" data-testid="modal-price-jumat">
+                        <span className="text-gray-600">Jumat:</span>
+                        <span className="font-bold text-gray-800">Rp {formatCurrency(property.rate.jumat)}</span>
+                      </div>
+                    )}
+                    {property.rate.weekend > 0 && (
+                      <div className="flex justify-between items-center" data-testid="modal-price-weekend">
+                        <span className="text-gray-600">Weekend:</span>
+                        <span className="font-bold text-gray-800">Rp {formatCurrency(property.rate.weekend)}</span>
+                      </div>
+                    )}
+                    {property.rate.weekday === 0 && property.rate.jumat === 0 && property.rate.weekend === 0 && (
+                      <div className="text-center py-4">
+                        <span className="text-lg font-semibold text-gray-700">Hubungi untuk informasi harga</span>
+                      </div>
+                    )}
                   </div>
                 </div>
 

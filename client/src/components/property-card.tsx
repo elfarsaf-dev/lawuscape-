@@ -36,9 +36,9 @@ export default function PropertyCard({ property, onSelect }: PropertyCardProps) 
           <div>
             <p className="text-sm text-gray-500">Mulai dari</p>
             <p className="text-2xl font-bold text-primary" data-testid={`text-price-${property.id}`}>
-              Rp {formatCurrency(property.rate.weekday)}
+              {property.rate.weekday > 0 ? `Rp ${formatCurrency(property.rate.weekday)}` : "Hubungi untuk harga"}
             </p>
-            <p className="text-sm text-gray-500">per malam</p>
+            {property.rate.weekday > 0 && <p className="text-sm text-gray-500">per malam</p>}
           </div>
           <div className="text-right">
             <p className="text-sm text-gray-500">Kapasitas</p>
