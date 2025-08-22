@@ -15,7 +15,14 @@
   port = 5000
 
 
-  [[headers]]
+ [[redirects]]
+  from = "/sitemap.xml"
+  to = "/sitemap.xml_"
+  status = 200
+  force = true
+  conditions = { Language = "en" }
+
+[[headers]]
   for = "/sitemap.xml"
   [headers.values]
     Content-Type = "application/xml"
