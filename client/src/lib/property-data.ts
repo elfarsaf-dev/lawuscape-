@@ -206,7 +206,7 @@ export const propertyData: Property[] = [
       "Mini Kitchen",
       "Free Breakfast 2 Pax",
       "Free Mineral Water, Gula, Teh & Kopi",
-      "Area Parkir"
+      "Area Parkir",
       "Free BBQ"
     ],
     capacity: "2-4 orang",
