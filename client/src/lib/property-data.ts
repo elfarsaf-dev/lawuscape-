@@ -650,5 +650,431 @@ export const propertyData: Property[] = [
     ],
     image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5826.jpeg?raw=true",
     type: "glamping"
-  }
-];
+  },
+
+  {
+  "id": "glamping-svg",
+  "name": "Glamping SVG",
+  "location": "Sekipan, Tawangmangu",
+  "rates": [
+    { "label": "Weekday", "price": 900000 },
+    { "label": "Weekend", "price": 1200000 }
+  ],
+  "units": 3,
+  "facilities": [
+    "Double Bed size 160x200",
+    "Kamar mandi water heater",
+    "Welcome drink",
+    "View bukit pinus",
+    "Smart TV",
+    "Wifi",
+    "Free breakfast 4 pack",
+    "Private pool air hangat",
+    "Parkir luas",
+    "Dekat kebun strawberry",
+    "Dekat warung makan",
+    "Mini kitchen",
+    "Extrabed tambahan 100k"
+  ],
+  "capacity": "8 orang",
+  "notes": [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  "image": "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5839.jpeg?raw=true",
+  "type": "glamping"
+},
+
+{
+  "id": "glamping-jingga",
+  "name": "Glamping Jingga",
+  "location": "Sekipan, Tawangmangu",
+  "rates": [
+    { "label": "Weekday", "price": 900000 },
+    { "label": "Weekend", "price": 1200000 }
+  ],
+  "units": 3,
+  "facilities": [
+    "Double Bed",
+    "Private Pool Air Hangat",
+    "Smart TV",
+    "Dispenser Air Panas Dingin",
+    "Mini Kitchen",
+    "Kamar Mandi Water Heater",
+    "Amenities",
+    "Welcoming Drink",
+    "Free Breakfast 3 Porsi",
+    "Wifi",
+    "Prayer tools"
+  ],
+  "capacity": "Untuk keluarga kecil",
+  "notes": [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  "image": "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5838.jpeg?raw=true",
+  "type": "glamping"
+},
+
+{
+  "id": "glamping-alm",
+  "name": "Glamping ALM",
+  "location": "Sekipan, Tawangmangu",
+  "rates": [
+    { "label": "Weekday", "price": 500000 },
+    { "label": "Jumat", "price": 600000 },
+    { "label": "Weekend", "price": 700000 }
+  ],
+  "units": 3,
+  "facilities": [
+    "Private Pool",
+    "1 Bed Queen Size",
+    "Extra Bed (Rp 100.000 / bed)",
+    "1 Kamar Mandi Dalam",
+    "Water Heater, Handuk & Amenities",
+    "Wi-Fi",
+    "Smart TV",
+    "Free Pop Mie, Mineral Water, Gula, Teh & Kopi",
+    "Area Parkir",
+    "Dekat Wisata Bukit Sekipan",
+    "Dekat Kebun Strawberry"
+  ],
+  "capacity": "Keluarga kecil & pasangan suami istri (cocok untuk honeymoon)",
+  "notes": [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  "image": "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5836.jpeg?raw=true",
+  "type": "glamping"
+},
+
+{
+  "id": "bhills-a",
+  "name": "B.HILLS A",
+  "location": "Blumbang, Tawangmangu",
+  "rates": [
+    { "label": "Weekday", "price": 550000 },
+    { "label": "Jumat", "price": 600000 },
+    { "label": "Weekend", "price": 750000 }
+  ],
+  "units": 5,
+  "facilities": [
+    "1 Bed King Size",
+    "Extra Bed (Rp 100.000 / bed)",
+    "1 Kamar Mandi Dalam",
+    "Water Heater, Handuk & Amenities",
+    "Wi-Fi",
+    "Smart TV",
+    "Free Gula, Teh & Kopi",
+    "Area Parkir",
+    "Dekat Wisata",
+    "Karaoke Set",
+    "Dispenser",
+    "Sofa Set",
+    "View City Light Solo"
+  ],
+  "capacity": "Keluarga kecil & pasangan suami istri (cocok untuk honeymoon)",
+  "notes": [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  "image": "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5835.jpeg?raw=true",
+  "type": "glamping"
+},
+
+
+{
+  "id": "bhills-b",
+  "name": "B.HILLS B",
+  "location": "Blumbang, Tawangmangu",
+  "rates": [
+    { "label": "Weekday", "price": 550000 },
+    { "label": "Jumat", "price": 600000 },
+    { "label": "Weekend", "price": 750000 }
+  ],
+  "units": 3,
+  "facilities": [
+    "1 Bed King Size",
+    "Extra Bed (Rp 100.000 / bed)",
+    "1 Kamar Mandi Dalam",
+    "Water Heater, Handuk & Amenities",
+    "Wi-Fi",
+    "Smart TV",
+    "Free Gula, Teh & Kopi",
+    "Area Parkir",
+    "Dekat Wisata",
+    "Dispenser",
+    "Sofa",
+    "View City Light Solo"
+  ],
+  "capacity": "Keluarga kecil & pasangan suami istri (cocok untuk honeymoon)",
+  "notes": [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  "image": "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5834.jpeg?raw=true",
+  "type": "glamping"
+},
+
+{
+  "id": "villa-diandra-2",
+  "name": "Villa Diandra 2",
+  "location": "Sekipan, Tawangmangu",
+  "rates": [
+    { "label": "Weekday", "price": 1500000 },
+    { "label": "Weekend", "price": 2000000 }
+  ],
+  "units": 1,
+  "facilities": [
+    "Villa baru, 2 lantai dengan furniture baru",
+    "Private pool",
+    "Balkon atas view pegunungan & hutan Sekipan",
+    "Sofa bed + ruang tamu & ruang keluarga",
+    "3 kamar tidur",
+    "3 kamar mandi air panas",
+    "Dapur & alat masak lengkap + mini bar (kulkas, dispenser, magic com, dll.)",
+    "LED TV",
+    "Free Wi-Fi",
+    "2 Smart TV + karaoke & sound system",
+    "Alat bakaran (BBQ)",
+    "Kapasitas maksimal 20 orang (lebih kena charge Rp 20.000/orang)",
+    "Extra bed Rp 100.000/bed",
+    "Parkir muat 3 mobil"
+  ],
+  "capacity": "Maksimal 20 orang (lebih kena charge Rp 20.000/orang)",
+  "notes": [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  "image": "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5816.jpeg?raw=true",
+  "type": "villa"
+},
+
+
+{
+  "id": "villa-2a-budi-luhur",
+  "name": "Villa DBL 2A",
+  "location": "Sekipan, Tawangmangu",
+  "rates": [
+    { "label": "Senin - Kamis", "price": 1700000 },
+    { "label": "Jumat", "price": 2250000 },
+    { "label": "Sabtu", "price": 2750000 },
+    { "label": "Minggu", "price": 1500000 }
+  ],
+  "units": 1,
+  "facilities": [
+    "3 kamar tidur",
+    "2 kamar mandi air panas",
+    "Dapur lengkap",
+    "Kulkas",
+    "Dispenser",
+    "Magicom",
+    "Alat makan lengkap",
+    "Wi-Fi",
+    "Karaoke",
+    "YouTube",
+    "TV kabel",
+    "Halaman luas",
+    "Ruang tamu",
+    "Ruang keluarga"
+  ],
+  "capacity": "Maksimal 20 orang",
+  "notes": [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  "image": "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5823.jpeg?raw=true",
+  "type": "villa"
+},
+
+
+{
+  id: "villa-pine",
+  name: "Villa Pine",
+  location: "Sekipan, Tawangmangu",
+  rates: [
+    { label: "Minggu - Kamis", price: 900000 },
+    { label: "Jumat", price: 900000 },
+    { label: "Sabtu", price: 1300000 }
+  ],
+  units: 4,
+  facilities: [
+    "Private pool air hangat",
+    "2 queen bed",
+    "1 kamar mandi air hangat",
+    "Ruang tamu luas",
+    "TV",
+    "Wi-Fi",
+    "Karaoke keluarga",
+    "Dapur + alat dapur lengkap",
+    "Dispenser + air galon",
+    "Free teh, gula, kopi",
+    "Kapasitas maksimal 10 orang",
+    "Parkir muat 4 mobil",
+    "Lokasi di bukit Sekipan (pusat wisata)",
+    "Dekat Kampoeng Halloween (1 menit)",
+    "Dekat Telaga Sarangan (40 menit)",
+    "Dekat Lawu Park (10 menit)",
+    "Dekat Wonderpark (4 menit)",
+    "Dekat Rumah Atsiri (10 menit)",
+    "Dekat Sakura Hills (10 menit)"
+  ],
+  capacity: "10 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Harga sewaktu-waktu bisa berubah",
+    "No miras/alkohol",
+    "No dangdutan/orgen tunggal/live music",
+    "Jam malam 23.30 WIB",
+    "Tidak boleh melanggar hukum & norma",
+    "DP tidak bisa kembali",
+    "Pindah villa = DP hangus",
+    "Cancel = DP hangus",
+    "Reschedule max H-4 & hanya bisa 1x"
+  ],
+  image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5814.jpeg?raw=true",
+  type: "villa"
+},
+
+{
+  id: "villa-edelweis",
+  name: "Villa Edelweis",
+  location: "Sekipan, Tawangmangu",
+  rates: [
+    { label: "Minggu - Kamis", price: 1300000 },
+    { label: "Jumat", price: 2000000 },
+    { label: "Sabtu", price: 2500000 }
+  ],
+  units: 1,
+  facilities: [
+    "3 kamar tidur",
+    "2 kamar mandi air panas",
+    "Private pool",
+    "Free 1 extrabed",
+    "Dapur lengkap + alat masak & makan",
+    "Kulkas",
+    "Peralatan shalat",
+    "Free 2 ekor ayam broiler (mentah/ungkep, pilih salah satu)",
+    "Free kopi, gula & teh",
+    "Karaoke",
+    "Wi-Fi",
+    "Smart TV",
+    "Alat bakaran",
+    "Alat grill (gas portable bawa sendiri)",
+    "Ruang keluarga luas",
+    "View pegunungan Sekipan",
+    "Dekat kebun stroberi",
+    "Dekat wisata Bukit Sekipan",
+    "Parkir luas"
+  ],
+  capacity: "15-25 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "No miras/alkohol",
+    "No narkoba",
+    "No pacaran/mesum",
+    "No orgen tunggal"
+  ],
+  image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5811.jpeg?raw=true",
+  type: "villa"
+},
+
+
+{
+  id: "glamping-syd-2",
+  name: "Glamping SYD 2",
+  location: "Sekipan, Tawangmangu",
+  rates: [
+    { label: "Weekday", price: 800000 },
+    { label: "Weekend", price: 1200000 }
+  ],
+  units: 1,
+  facilities: [
+    "Kapasitas 6-8 orang",
+    "2 kamar dengan 3 bed",
+    "Private pool air hangat",
+    "Welcome snack dan welcome drink",
+    "Smart TV",
+    "Catle jug",
+    "Free Wi-Fi"
+  ],
+  capacity: "6-8 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5829.jpeg?raw=true",
+  type: "glamping"
+},
+
+
+{
+  id: "glamping-lw-purva",
+  name: "Glamping LW Purva",
+  location: "Sekipan, Tawangmangu",
+  rates: [
+    { label: "Minggu - Kamis", price: 490000 },
+    { label: "Jumat", price: 690000 },
+    { label: "Sabtu", price: 790000 }
+  ],
+  units: 1,
+  facilities: [
+    "Kapasitas 6 orang",
+    "2 kasur nyaman (ada extra bed)",
+    "Private pool luas eksklusif",
+    "Kamar mandi luas & aesthetic",
+    "Bathtub air hangat",
+    "Shower area",
+    "Area mezanin luas",
+    "Smart TV (Netflix & aplikasi film lain)",
+    "2 kursi & meja santai",
+    "Amenitas lengkap (odol, sabun, shampo, handuk, dll.)",
+    "Free sarapan 2 pax",
+    "Welcome drink (kopi, teh, gula, krimer)",
+    "Cooking set komplit",
+    "Free galon air minum",
+    "Parkir luas",
+    "Penjaga ramah siap membantu"
+  ],
+  capacity: "6 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5833.jpeg?raw=true",
+  type: "glamping"
+}];
