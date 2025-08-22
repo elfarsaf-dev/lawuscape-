@@ -3,7 +3,7 @@ import type { Property } from "@shared/schema";
 export const propertyData: Property[] = [
   {
     id: "glamping-diyanis",
-    name: "Glamping Diyanis",
+    name: "Glamping DYN",
     location: "Sekipan, Tawangmangu",
     rates: [
       { label: "Weekday - Kolam renang air dingin", price: 500000 },
@@ -41,7 +41,7 @@ export const propertyData: Property[] = [
   },
   {
     id: "villa-dita",
-    name: "Villa Dita", 
+    name: "Villa DT", 
     location: "Sekipan, Tawangmangu",
     rates: [
       { label: "Minggu – Kamis", price: 2000000 },
@@ -80,7 +80,7 @@ export const propertyData: Property[] = [
   },
   {
     id: "mongkrang-story-cottage",
-    name: "Mongkrang Story Cottage",
+    name: "Mongkrang SC",
     location: "Tawangmangu", 
     rates: [
       { label: "Weekday", price: 500000 },
@@ -115,7 +115,7 @@ export const propertyData: Property[] = [
   },
   {
     id: "villa-alami",
-    name: "Villa Alami",
+    name: "Villa ALM",
     location: "Sekipan, Tawangmangu",
     rates: [
       { label: "Weekday", price: 1500000 },
@@ -150,7 +150,7 @@ export const propertyData: Property[] = [
   },
   {
     id: "villa-teduh-jiwa",
-    name: "Villa Teduh Jiwa",
+    name: "Villa TD JW",
     location: "Sekipan, Tawangmangu",
     rates: [],
     units: 1,
@@ -186,7 +186,7 @@ export const propertyData: Property[] = [
   },
   {
     id: "diza-glamping",
-    name: "Diza Glamping",
+    name: "DZ Glamping",
     location: "Tawangmangu",
     rates: [
       { label: "Weekday", price: 550000 },
@@ -224,7 +224,7 @@ export const propertyData: Property[] = [
   },
   {
     id: "karismaya",
-    name: "Karismaya",
+    name: "KRYSM",
     location: "Sekipan, Tawangmangu",
     rates: [
       { label: "Weekday", price: 2000000 },
@@ -293,7 +293,7 @@ export const propertyData: Property[] = [
   },
   {
     id: "villa-andromeda",
-    name: "Villa Andromeda",
+    name: "Villa ADR",
     location: "Sekipan, Tawangmangu",
     rates: [
       { label: "Weekday", price: 2000000 },
@@ -328,7 +328,7 @@ export const propertyData: Property[] = [
   },
   {
     id: "zheyuri-glamping",
-    name: "Zheyuri Glamping",
+    name: "ZHY Glamping",
     location: "Tawangmangu",
     rates: [
       { label: "Harga start 500K", price: 500000 }
@@ -362,7 +362,7 @@ export const propertyData: Property[] = [
   },
   {
     id: "azalea-glamping",
-    name: "Azalea Glamping",
+    name: "AZL Glamping",
     location: "Pleseran, Tawangmangu",
     rates: [
       { label: "Weekday", price: 500000 },
@@ -405,7 +405,7 @@ export const propertyData: Property[] = [
   },
   {
     id: "villa-kemandoan",
-    name: "Villa Kemandoan",
+    name: "Villa KMD",
     location: "Sekipan, Tawangmangu",
     rates: [
       { label: "Mulai 2 Jutaan / Malam", price: 2000000 }
@@ -440,7 +440,7 @@ export const propertyData: Property[] = [
   },
   {
     id: "2r-glamping",
-    name: "TWO R Glamping",
+    name: "TR Glamping",
     location: "Kalisoro, Tawangmangu",
     rates: [
       { label: "Senin–Kamis", price: 550000 },
@@ -471,7 +471,7 @@ export const propertyData: Property[] = [
   },
   {
     id: "villa-ziezo",
-    name: "Villa Ziezo",
+    name: "Villa ZZ",
     location: "Sekipan, Tawangmangu",
     rates: [
       { label: "3 Kamar - Minggu–Kamis", price: 1300000 },
@@ -514,7 +514,7 @@ export const propertyData: Property[] = [
   },
   {
     id: "dava-glamping",
-    name: "Dava Glamping",
+    name: "DV Glamping",
     location: "Tawangmangu",
     rates: [
       { label: "Minggu–Kamis", price: 400000 },
@@ -550,7 +550,7 @@ export const propertyData: Property[] = [
   },
   {
     id: "villa-royal",
-    name: "Villa Royal",
+    name: "Villa RYL",
     location: "Tawangmangu",
     rates: [
       { label: "Weekday", price: 2000000 },
@@ -584,7 +584,7 @@ export const propertyData: Property[] = [
   },
   {
     id: "bumwa-glamping",
-    name: "BUMWA Glamping",
+    name: "BMW Glamping",
     location: "Tawangmangu",
     rates: [
       { label: "Harga mulai 600 ribuan", price: 600000 }
