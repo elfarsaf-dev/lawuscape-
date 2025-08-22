@@ -14,14 +14,6 @@
   command = "npm run dev"
   port = 5000
 
-
- [[redirects]]
-  from = "/sitemap.xml"
-  to = "/sitemap.xml_"
-  status = 200
-  force = true
-  conditions = { Language = "en" }
-
 [[headers]]
   for = "/sitemap.xml"
   [headers.values]
