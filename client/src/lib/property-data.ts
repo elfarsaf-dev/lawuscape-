@@ -72,7 +72,7 @@ export const propertyData: Property[] = [
     "Tidak boleh melanggar hukum dan norma masyarakat",
     "DP 30% dari harga"
   ],
-  "image": "https://link-gambar-villa-fj.jpg",
+  "image": "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5830.jpeg?raw=true",
   "type": "villa"
 },
   {
@@ -653,7 +653,7 @@ export const propertyData: Property[] = [
   },
 
   {
-  "id": "glamping-svg",
+  "id": "glamping-svarga",
   "name": "Glamping SVG",
   "location": "Sekipan, Tawangmangu",
   "rates": [
@@ -838,7 +838,7 @@ export const propertyData: Property[] = [
 
 {
   "id": "villa-diandra-2",
-  "name": "Villa Diandra 2",
+  "name": "Villa DNDR 2",
   "location": "Sekipan, Tawangmangu",
   "rates": [
     { "label": "Weekday", "price": 1500000 },
@@ -876,7 +876,7 @@ export const propertyData: Property[] = [
 
 {
   "id": "villa-2a-budi-luhur",
-  "name": "Villa DBL 2A",
+  "name": "Villa BDL 2A",
   "location": "Sekipan, Tawangmangu",
   "rates": [
     { "label": "Senin - Kamis", "price": 1700000 },
@@ -965,7 +965,7 @@ export const propertyData: Property[] = [
 
 {
   id: "villa-edelweis",
-  name: "Villa Edelweis",
+  name: "Villa EDLW",
   location: "Sekipan, Tawangmangu",
   rates: [
     { label: "Minggu - Kamis", price: 1300000 },
@@ -1041,7 +1041,7 @@ export const propertyData: Property[] = [
 
 {
   id: "glamping-lw-purva",
-  name: "Glamping LW Purva",
+  name: "Glamping LWPR",
   location: "Sekipan, Tawangmangu",
   rates: [
     { label: "Minggu - Kamis", price: 490000 },
