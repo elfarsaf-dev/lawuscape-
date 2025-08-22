@@ -36,7 +36,7 @@ export const propertyData: Property[] = [
       "No mesum",
       "No drugs"
     ],
-    image: "https://i.ibb.co/99xDkHk/dji-fly-20250731-113250-0055-1753937303333-photo.jpg",
+    image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
     type: "glamping"
   },
   {
@@ -75,7 +75,7 @@ export const propertyData: Property[] = [
       "No mesum",
       "No drugs"
     ],
-    image: "https://i.ibb.co/W1YRs8z/IMG-5160.jpg",
+    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
     type: "villa"
   },
   {
@@ -110,7 +110,7 @@ export const propertyData: Property[] = [
       "No drugs",
       "Super cantik dengan view Gunung Lawu"
     ],
-    image: "https://i.ibb.co/B2d8n3c/dji-fly-20250814-095114-0186-1755156993215-photo.jpg",
+    image: "https://images.unsplash.com/photo-1510798831971-661eb04b3739?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
     type: "villa"
   },
   {
@@ -145,7 +145,7 @@ export const propertyData: Property[] = [
       "No drugs",
       "Lokasi dekat wisata Bukit Sekipan - cuma 5 langkah"
     ],
-    image: "https://i.ibb.co/jvjKPX0/IMG-4031.jpg",
+    image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
     type: "villa"
   },
   {
@@ -181,7 +181,7 @@ export const propertyData: Property[] = [
       "No mesum",
       "No drugs"
     ],
-    image: "https://i.ibb.co/1Gw0ZPZ/IMG-4399.jpg",
+    image: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
     type: "villa"
   },
   {
@@ -288,7 +288,7 @@ export const propertyData: Property[] = [
       "No mesum",
       "No drugs"
     ],
-    image: "https://i.ibb.co/zW04dkW/IMG-4206.jpg",
+    image: "https://images.unsplash.com/photo-1520637836862-4d197d17c53a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
     type: "villa"
   },
   {
@@ -323,7 +323,7 @@ export const propertyData: Property[] = [
       "Dekat wisata",
       "Dekat kebun strawberry"
     ],
-    image: "https://i.ibb.co/JL91gTZ/IMG-4545.jpg",
+    image: "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
     type: "villa"
   },
   {
@@ -400,7 +400,7 @@ export const propertyData: Property[] = [
       "Pas juga untuk honeymoon",
       "Dekat wisata Pleseran"
     ],
-    image: "https://i.ibb.co/ymNnby7/IMG-2996.jpg",
+    image: "https://images.unsplash.com/photo-1531116055003-5e6c5bb0f5d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
     type: "glamping"
   },
   {
@@ -435,7 +435,7 @@ export const propertyData: Property[] = [
       "Rooftop dengan view sunset & bukit Sekipan",
       "Cocok untuk relaksasi dari hiruk pikuk kota"
     ],
-    image: "https://i.ibb.co/rGvggJ9/dji-fly-20250808-111357-0126-1754702308139-photo.jpg",
+    image: "https://images.unsplash.com/photo-1549294413-26f195200c16?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
     type: "villa"
   },
   {
