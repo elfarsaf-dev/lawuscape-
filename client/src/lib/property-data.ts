@@ -36,7 +36,7 @@ export const propertyData: Property[] = [
       "No mesum",
       "No drugs"
     ],
-    image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+    image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5817.jpeg?raw=true",
     type: "glamping"
   },
   {
@@ -145,7 +145,7 @@ export const propertyData: Property[] = [
       "No drugs",
       "Lokasi dekat wisata Bukit Sekipan - cuma 5 langkah"
     ],
-    image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+    image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5824.jpeg?raw=true",
     type: "villa"
   },
   {
@@ -323,7 +323,7 @@ export const propertyData: Property[] = [
       "Dekat wisata",
       "Dekat kebun strawberry"
     ],
-    image: "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+    image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5819.jpeg?raw=true",
     type: "villa"
   },
   {
@@ -440,7 +440,7 @@ export const propertyData: Property[] = [
   },
   {
     id: "2r-glamping",
-    name: "2R Glamping",
+    name: "TWO R Glamping",
     location: "Kalisoro, Tawangmangu",
     rates: [
       { label: "Senin–Kamis", price: 550000 },
@@ -466,7 +466,7 @@ export const propertyData: Property[] = [
       "No drugs",
       "Dekat wisata Bukit Sekipan"
     ],
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+    image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5832.jpeg?raw=true",
     type: "glamping"
   },
   {
