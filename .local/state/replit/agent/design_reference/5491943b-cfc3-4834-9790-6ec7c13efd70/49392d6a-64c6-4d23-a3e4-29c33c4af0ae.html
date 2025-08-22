@@ -1,0 +1,575 @@
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAWUSCAPE - Villa & Glamping Tawangmangu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    },
+                    colors: {
+                        primary: '#059669',
+                        secondary: '#0F766E'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-mountain text-primary text-2xl"></i>
+                    <h1 class="text-2xl font-bold text-gray-800">LAWUSCAPE</h1>
+                </div>
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="#" class="text-gray-600 hover:text-primary transition-colors">Villa</a>
+                    <a href="#" class="text-gray-600 hover:text-primary transition-colors">Glamping</a>
+                    <a href="#" class="text-gray-600 hover:text-primary transition-colors">Tentang</a>
+                    <a href="#" class="text-gray-600 hover:text-primary transition-colors">Kontak</a>
+                </nav>
+                <button class="md:hidden text-gray-600">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-primary to-secondary py-20">
+        <!-- Beautiful mountain landscape with morning mist and pine trees -->
+        <div class="absolute inset-0 bg-black bg-opacity-20" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080'); background-size: cover; background-position: center;"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-6xl font-bold text-white mb-4">
+                Temukan Villa & Glamping<br>
+                <span class="text-emerald-200">di Tawangmangu</span>
+            </h2>
+            <p class="text-xl text-emerald-100 mb-8 max-w-2xl mx-auto">
+                Nikmati pengalaman menginap yang tak terlupakan dengan pemandangan Gunung Lawu yang menakjubkan
+            </p>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="relative -mt-8 z-10">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-2xl shadow-xl p-6">
+                <div class="flex flex-col md:flex-row gap-4">
+                    <div class="flex-1">
+                        <input type="text" id="searchInput" placeholder="Cari nama, fasilitas, kapasitas..." 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none text-gray-700">
+                    </div>
+                    <button onclick="performSearch()" 
+                            class="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-xl font-medium transition-all duration-200 flex items-center justify-center space-x-2">
+                        <i class="fas fa-search"></i>
+                        <span>Cari</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div id="resultsHeader" class="mb-8">
+                <h3 class="text-2xl font-bold text-gray-800">Pilihan Terbaik untuk Anda</h3>
+                <p class="text-gray-600 mt-2">Temukan akomodasi yang sesuai dengan kebutuhan Anda</p>
+            </div>
+            
+            <!-- Loading State -->
+            <div id="loadingState" class="hidden text-center py-12">
+                <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+                <p class="mt-4 text-gray-600">Mencari akomodasi...</p>
+            </div>
+
+            <!-- Results Grid -->
+            <div id="resultsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Results will be populated here -->
+            </div>
+
+            <!-- No Results -->
+            <div id="noResults" class="hidden text-center py-12">
+                <i class="fas fa-search text-4xl text-gray-400 mb-4"></i>
+                <h4 class="text-xl font-semibold text-gray-600 mb-2">Tidak ada hasil ditemukan</h4>
+                <p class="text-gray-500">Coba gunakan kata kunci yang berbeda</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detail Modal -->
+    <div id="detailModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 overflow-y-auto">
+        <div class="min-h-screen px-4 py-8">
+            <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl">
+                <div class="p-6">
+                    <!-- Modal Header -->
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <h3 id="modalTitle" class="text-2xl font-bold text-gray-800"></h3>
+                            <p id="modalLocation" class="text-gray-600 mt-1"></p>
+                        </div>
+                        <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600 transition-colors">
+                            <i class="fas fa-times text-2xl"></i>
+                        </button>
+                    </div>
+
+                    <!-- Modal Content -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <!-- Image -->
+                        <div>
+                            <img id="modalImage" src="" alt="" class="w-full h-64 lg:h-80 object-cover rounded-xl">
+                        </div>
+
+                        <!-- Details -->
+                        <div class="space-y-6">
+                            <!-- Pricing -->
+                            <div class="bg-slate-50 rounded-xl p-4">
+                                <h4 class="font-semibold text-gray-800 mb-3">Harga per Malam</h4>
+                                <div id="modalPricing" class="space-y-2">
+                                    <!-- Pricing will be populated here -->
+                                </div>
+                            </div>
+
+                            <!-- Capacity & Units -->
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-blue-50 rounded-xl p-4 text-center">
+                                    <i class="fas fa-users text-blue-600 text-2xl mb-2"></i>
+                                    <p class="text-sm text-blue-600 font-medium">Kapasitas</p>
+                                    <p id="modalCapacity" class="text-lg font-bold text-blue-800"></p>
+                                </div>
+                                <div class="bg-green-50 rounded-xl p-4 text-center">
+                                    <i class="fas fa-home text-green-600 text-2xl mb-2"></i>
+                                    <p class="text-sm text-green-600 font-medium">Unit Tersedia</p>
+                                    <p id="modalUnits" class="text-lg font-bold text-green-800"></p>
+                                </div>
+                            </div>
+
+                            <!-- Check-in/out -->
+                            <div class="bg-yellow-50 rounded-xl p-4">
+                                <h4 class="font-semibold text-yellow-800 mb-2">Check-in & Check-out</h4>
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-yellow-700">Check-in: 14:00</span>
+                                    <span class="text-yellow-700">Check-out: 12:00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Facilities -->
+                    <div class="mt-8">
+                        <h4 class="font-semibold text-gray-800 mb-4">Fasilitas</h4>
+                        <div id="modalFacilities" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                            <!-- Facilities will be populated here -->
+                        </div>
+                    </div>
+
+                    <!-- Notes -->
+                    <div class="mt-8">
+                        <h4 class="font-semibold text-gray-800 mb-4">Catatan Penting</h4>
+                        <div id="modalNotes" class="bg-red-50 border border-red-200 rounded-xl p-4">
+                            <!-- Notes will be populated here -->
+                        </div>
+                    </div>
+
+                    <!-- Book Now Button -->
+                    <div class="mt-8 pt-6 border-t">
+                        <button class="w-full bg-primary hover:bg-primary/90 text-white py-4 rounded-xl font-semibold text-lg transition-all duration-200">
+                            <i class="fas fa-calendar-check mr-2"></i>
+                            Hubungi untuk Booking
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-mountain text-primary text-2xl"></i>
+                        <h3 class="text-2xl font-bold">LAWUSCAPE</h3>
+                    </div>
+                    <p class="text-gray-300 mb-4">Platform pencarian villa dan glamping terpercaya di kawasan Tawangmangu dengan pemandangan Gunung Lawu yang menakjubkan.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-primary transition-colors">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-primary transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-primary transition-colors">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Menu</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Villa</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Glamping</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Tentang Kami</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Kontak</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Kontak</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2 text-primary"></i>
+                            Tawangmangu, Karanganyar
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2 text-primary"></i>
+                            +62 812 3456 7890
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-primary"></i>
+                            info@lawuscape.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-300">&copy; 2024 LAWUSCAPE. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Sample JSON data based on the uploaded file
+        const propertyData = [
+            {
+                name: "Glamping Diyanis",
+                location: "Sekipan, Tawangmangu",
+                rate: {
+                    weekday: 500000,
+                    jumat: 600000,
+                    weekend: 700000
+                },
+                units: 11,
+                facilities: [
+                    "Smart TV", "Free Wi-Fi", "Kamar mandi air hangat", "Private pool hangat",
+                    "1 bed besar", "Dispenser", "Free mie instan, kopi, gula, teh",
+                    "Dapur mini", "Perlengkapan masak & makan", "Free breakfast untuk 2 orang",
+                    "Tempat parkir luas"
+                ],
+                capacity: "2-5 orang",
+                notes: [
+                    "Check in jam 2 siang", "Check out jam 12 siang", "Bukti nikah untuk pasangan",
+                    "No miras", "No mesum", "No drugs"
+                ],
+                image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+            },
+            {
+                name: "Villa Dita",
+                location: "Sekipan, Tawangmangu",
+                rate: {
+                    weekday: 2000000,
+                    jumat: 2500000,
+                    weekend: 3000000
+                },
+                units: 1,
+                facilities: [
+                    "4 Kamar tidur", "3 Kamar mandi", "Bangunan 2 lantai", "Free Wi-Fi",
+                    "Kolam renang", "Karaoke keluarga", "TV LED", "Alat bakar lengkap",
+                    "View perbukitan Sekipan", "Halaman luas", "Parkir luas hingga 6 mobil",
+                    "Kitchen set lengkap", "Alat makan lengkap", "Free 2 extra bed",
+                    "Free teh, kopi & mie"
+                ],
+                capacity: "Maksimal 25 orang",
+                notes: [
+                    "Check in jam 2 siang", "Check out jam 12 siang", "Bukti nikah untuk pasangan",
+                    "No miras", "No mesum", "No drugs"
+                ],
+                image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+            },
+            {
+                name: "Mongkrang Story Cottage",
+                location: "Tawangmangu",
+                rate: {
+                    weekday: 400000,
+                    jumat: 400000,
+                    weekend: 600000
+                },
+                units: 1,
+                facilities: [
+                    "1 Bed", "Sofa", "Karpet tebal", "TV Android", "Wi-Fi", "Teko listrik",
+                    "Kamar mandi dalam", "Air panas & dingin", "Kopi dan teh",
+                    "Include sarapan pagi untuk 2 orang", "View Gunung Lawu"
+                ],
+                capacity: "Maksimal 6 orang",
+                notes: [
+                    "Check in jam 2 siang", "Check out jam 12 siang", "Bukti nikah untuk pasangan",
+                    "No miras", "No mesum", "No drugs"
+                ],
+                image: "https://images.unsplash.com/photo-1510798831971-661eb04b3739?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+            },
+            {
+                name: "Villa Alami",
+                location: "Sekipan, Tawangmangu",
+                rate: {
+                    weekday: 1500000,
+                    jumat: 1700000,
+                    weekend: 2500000
+                },
+                units: 1,
+                facilities: [
+                    "3 kamar tidur", "Kamar mandi air hangat", "Alat dapur komplit",
+                    "10 mie instan, kopi, teh, air galon", "TV LED", "Sound karaoke keluarga",
+                    "Free Wi-Fi", "Alat bakaran dan arang", "Berlangganan Netflix",
+                    "Kolam renang", "Dekat wisata Bukit Sekipan"
+                ],
+                capacity: "Maksimal 20 orang",
+                notes: [
+                    "Check in jam 2 siang", "Check out jam 12 siang", "Bukti nikah untuk pasangan",
+                    "No miras", "No mesum", "No drugs", "Lokasi dekat wisata Bukit Sekipan - cuma 5 langkah"
+                ],
+                image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+            },
+            {
+                name: "Diza Glamping",
+                location: "Tawangmangu",
+                rate: {
+                    weekday: 550000,
+                    jumat: 700000,
+                    weekend: 800000
+                },
+                units: 3,
+                facilities: [
+                    "Private Pool Air Hangat", "1 Bed Type Queen Size", "1 Kamar Mandi Dalam",
+                    "Water Heater", "Handuk & Amenities", "Wi-Fi Available", "Smart TV",
+                    "Kursi Outdoors", "Mini Kitchen", "Free Breakfast 2 Pax",
+                    "Free Mineral Water, Gula, Teh & Kopi", "Area Parkir",
+                    "Dekat Wisata Buper Pleseran & Telaga Asmara"
+                ],
+                capacity: "2-4 orang",
+                notes: [
+                    "Check in jam 2 siang", "Check out jam 12 siang", "Bukti nikah untuk pasangan",
+                    "No miras", "No mesum", "No drugs", "Price From Owner, No Mark Up"
+                ],
+                image: "https://images.unsplash.com/photo-1504198322253-cfa87a0ff25f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+            },
+            {
+                name: "Azalea Glamping",
+                location: "Pleseran, Tawangmangu",
+                rate: {
+                    weekday: 500000,
+                    jumat: 500000,
+                    weekend: 800000
+                },
+                units: 5,
+                facilities: [
+                    "Bed ukuran 160x200", "1 Kamar mandi dengan water heater", "Smart TV 43\"",
+                    "Free Wi-Fi", "Mini kitchen", "Alat masak & makan lengkap",
+                    "Handuk + amenities", "Cermin + hair dryer", "Free sarapan untuk 2 orang",
+                    "Welcome drink (teh, gula, kopi)", "Dispenser (panas, biasa, dingin)",
+                    "Mini private pool cukup besar", "View bukit dan hutan pinus",
+                    "Dekat sungai, bisa untuk ciblon", "Dekat wisata Pleseran",
+                    "Diskon 50% tiket masuk wisata Buper Pleseran", "Free BBQ", "Free tenda"
+                ],
+                capacity: "2-6 orang",
+                notes: [
+                    "Check in jam 2 siang", "Check out jam 12 siang", "Bukti nikah untuk pasangan",
+                    "No miras", "No mesum", "No drugs", "Cocok untuk honeymoon"
+                ],
+                image: "https://images.unsplash.com/photo-1531116055003-5e6c5bb0f5d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+            }
+        ];
+
+        let currentData = propertyData;
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            renderResults(currentData);
+            
+            // Add search functionality
+            document.getElementById('searchInput').addEventListener('input', function() {
+                const query = this.value.toLowerCase();
+                if (query.length === 0) {
+                    renderResults(currentData);
+                } else {
+                    performSearch();
+                }
+            });
+
+            // Add enter key support for search
+            document.getElementById('searchInput').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    performSearch();
+                }
+            });
+        });
+
+        function performSearch() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            
+            if (query.length === 0) {
+                renderResults(currentData);
+                return;
+            }
+
+            showLoading();
+
+            // Simulate API delay
+            setTimeout(() => {
+                const filteredData = currentData.filter(property => {
+                    return (
+                        property.name.toLowerCase().includes(query) ||
+                        property.location.toLowerCase().includes(query) ||
+                        property.capacity.toLowerCase().includes(query) ||
+                        property.facilities.some(facility => facility.toLowerCase().includes(query)) ||
+                        property.notes.some(note => note.toLowerCase().includes(query))
+                    );
+                });
+
+                renderResults(filteredData);
+                hideLoading();
+            }, 500);
+        }
+
+        function showLoading() {
+            document.getElementById('loadingState').classList.remove('hidden');
+            document.getElementById('resultsGrid').classList.add('hidden');
+            document.getElementById('noResults').classList.add('hidden');
+        }
+
+        function hideLoading() {
+            document.getElementById('loadingState').classList.add('hidden');
+        }
+
+        function renderResults(data) {
+            const grid = document.getElementById('resultsGrid');
+            const noResults = document.getElementById('noResults');
+
+            if (data.length === 0) {
+                grid.classList.add('hidden');
+                noResults.classList.remove('hidden');
+                return;
+            }
+
+            grid.classList.remove('hidden');
+            noResults.classList.add('hidden');
+
+            grid.innerHTML = data.map(property => `
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
+                    <div class="relative">
+                        <img src="${property.image}" alt="${property.name}" 
+                             class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1">
+                            <span class="text-sm font-medium text-gray-700">${property.units} unit${property.units > 1 ? 's' : ''}</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">${property.name}</h3>
+                        <p class="text-gray-600 mb-4 flex items-center">
+                            <i class="fas fa-map-marker-alt text-primary mr-2"></i>
+                            ${property.location}
+                        </p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div>
+                                <p class="text-sm text-gray-500">Mulai dari</p>
+                                <p class="text-2xl font-bold text-primary">Rp ${formatCurrency(property.rate.weekday)}</p>
+                                <p class="text-sm text-gray-500">per malam</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-sm text-gray-500">Kapasitas</p>
+                                <p class="font-semibold text-gray-700">${property.capacity}</p>
+                            </div>
+                        </div>
+                        <button onclick="showModal(${currentData.indexOf(property)})" 
+                                class="w-full bg-primary hover:bg-primary/90 text-white py-3 rounded-xl font-medium transition-all duration-200">
+                            Lihat Detail
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function showModal(index) {
+            const property = currentData[index];
+            
+            // Populate modal content
+            document.getElementById('modalTitle').textContent = property.name;
+            document.getElementById('modalLocation').textContent = property.location;
+            document.getElementById('modalImage').src = property.image;
+            document.getElementById('modalImage').alt = property.name;
+            document.getElementById('modalCapacity').textContent = property.capacity;
+            document.getElementById('modalUnits').textContent = `${property.units} unit${property.units > 1 ? 's' : ''}`;
+
+            // Populate pricing
+            const pricingHtml = `
+                <div class="flex justify-between items-center">
+                    <span class="text-gray-600">Weekday:</span>
+                    <span class="font-bold text-gray-800">Rp ${formatCurrency(property.rate.weekday)}</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-gray-600">Jumat:</span>
+                    <span class="font-bold text-gray-800">Rp ${formatCurrency(property.rate.jumat)}</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-gray-600">Weekend:</span>
+                    <span class="font-bold text-gray-800">Rp ${formatCurrency(property.rate.weekend)}</span>
+                </div>
+            `;
+            document.getElementById('modalPricing').innerHTML = pricingHtml;
+
+            // Populate facilities
+            const facilitiesHtml = property.facilities.map(facility => `
+                <div class="flex items-center space-x-2 text-sm">
+                    <i class="fas fa-check text-green-600"></i>
+                    <span class="text-gray-700">${facility}</span>
+                </div>
+            `).join('');
+            document.getElementById('modalFacilities').innerHTML = facilitiesHtml;
+
+            // Populate notes
+            const notesHtml = property.notes.map(note => `
+                <div class="flex items-start space-x-2 text-sm mb-2">
+                    <i class="fas fa-exclamation-triangle text-red-600 mt-0.5"></i>
+                    <span class="text-red-700">${note}</span>
+                </div>
+            `).join('');
+            document.getElementById('modalNotes').innerHTML = notesHtml;
+
+            // Show modal
+            document.getElementById('detailModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('detailModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function formatCurrency(amount) {
+            return new Intl.NumberFormat('id-ID').format(amount);
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('detailModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Close modal on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
