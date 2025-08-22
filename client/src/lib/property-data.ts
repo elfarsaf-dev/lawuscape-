@@ -181,7 +181,7 @@ export const propertyData: Property[] = [
       "No mesum",
       "No drugs"
     ],
-    image: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+    image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5821.jpeg?raw=true",
     type: "villa"
   },
   {
@@ -219,7 +219,7 @@ export const propertyData: Property[] = [
       "Price From Owner, No Mark Up",
       "Dekat Wisata Buper Pleseran & Telaga Asmara"
     ],
-    image: "https://images.unsplash.com/photo-1504198322253-cfa87a0ff25f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+    image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5827.jpeg?raw=true",
     type: "glamping"
   },
   {
@@ -254,7 +254,7 @@ export const propertyData: Property[] = [
       "Dekat Wisata",
       "Dekat Kebun Strawberry"
     ],
-    image: "https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+    image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5828.jpeg?raw=true",
     type: "villa"
   },
   {
@@ -288,7 +288,7 @@ export const propertyData: Property[] = [
       "No mesum",
       "No drugs"
     ],
-    image: "https://images.unsplash.com/photo-1520637836862-4d197d17c53a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+    image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5822.jpeg?raw=true",
     type: "villa"
   },
   {
@@ -357,7 +357,7 @@ export const propertyData: Property[] = [
       "Glamping baru di Tawangmangu dengan view cantik",
       "Dekat wisata"
     ],
-    image: "https://images.unsplash.com/photo-1517824806704-9040b037703b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+    image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5825.jpeg?raw=true",
     type: "glamping"
   },
   {
@@ -400,7 +400,7 @@ export const propertyData: Property[] = [
       "Pas juga untuk honeymoon",
       "Dekat wisata Pleseran"
     ],
-    image: "https://images.unsplash.com/photo-1531116055003-5e6c5bb0f5d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+    image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5831.jpeg?raw=true",
     type: "glamping"
   },
   {
@@ -435,7 +435,7 @@ export const propertyData: Property[] = [
       "Rooftop dengan view sunset & bukit Sekipan",
       "Cocok untuk relaksasi dari hiruk pikuk kota"
     ],
-    image: "https://images.unsplash.com/photo-1549294413-26f195200c16?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+    image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5820.jpeg?raw=true",
     type: "villa"
   },
   {
@@ -545,7 +545,7 @@ export const propertyData: Property[] = [
       "Price from Owner, No Mark Up",
       "Dekat dengan Buper Pleseran & Telaga Asmara"
     ],
-    image: "https://images.unsplash.com/photo-1587061949409-02df41d5e562?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+    image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5837.jpeg?raw=true",
     type: "glamping"
   },
   {
@@ -611,7 +611,7 @@ export const propertyData: Property[] = [
       "No drugs",
       "Dekat wisata Bukit Sekipan & kebun stroberi (bisa petik sendiri)"
     ],
-    image: "https://images.unsplash.com/photo-1607627000458-210e8d31c6d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+    image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5826.jpeg?raw=true",
     type: "glamping"
   }
 ];
