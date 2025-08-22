@@ -40,6 +40,42 @@ export const propertyData: Property[] = [
     type: "glamping"
   },
   {
+  "id": "villa-fill&jill",
+  "name": "Villa FJ",
+  "location": "Sekipan, Tawangmangu",
+  "rates": [
+    { "label": "Weekday", "price": 2000000 },
+    { "label": "Weekend", "price": 2500000 }
+  ],
+  "units": 1,
+  "facilities": [
+    "4 Kamar tidur",
+    "3 Kamar mandi (dengan water heater)",
+    "Ruang keluarga",
+    "Free Wifi",
+    "1 set Karaoke",
+    "Dapur (magicom, peralatan masak & makan, kompor, kulkas, galon air mineral)",
+    "Free mie instan",
+    "Kopi, Gula, Teh",
+    "Tersedia alat bakaran",
+    "Rooftop dengan view bukit",
+    "Kolam renang",
+    "Dekat dengan kebun strawberry"
+  ],
+  "capacity": "20-25 orang",
+  "notes": [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Harga sewaktu-waktu bisa berubah",
+    "Bukan villa bebas",
+    "Jam malam 23.00 WIB",
+    "Tidak boleh melanggar hukum dan norma masyarakat",
+    "DP 30% dari harga"
+  ],
+  "image": "https://link-gambar-villa-fj.jpg",
+  "type": "villa"
+},
+  {
     id: "villa-dita",
     name: "Villa DT", 
     location: "Sekipan, Tawangmangu",
